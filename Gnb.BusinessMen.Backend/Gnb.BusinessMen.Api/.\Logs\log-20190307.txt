@@ -1,0 +1,29 @@
+2019-03-07 21:56:39.867 -05:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2019-03-07 21:56:40.024 -05:00 [Information] Executing endpoint '"Gnb.BusinessMen.Api.Controllers.ValuesController.Get (Gnb.BusinessMen.Api)"'
+2019-03-07 21:56:40.076 -05:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "Gnb.BusinessMen.Api.Controllers.ValuesController.Get (Gnb.BusinessMen.Api)"
+2019-03-07 21:56:40.117 -05:00 [Information] Executing action method "Gnb.BusinessMen.Api.Controllers.ValuesController.Get (Gnb.BusinessMen.Api)" - Validation state: Valid
+2019-03-07 21:56:40.136 -05:00 [Information] Executed action method "Gnb.BusinessMen.Api.Controllers.ValuesController.Get (Gnb.BusinessMen.Api)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.8286ms.
+2019-03-07 21:56:40.158 -05:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2019-03-07 21:56:40.360 -05:00 [Information] Executed action "Gnb.BusinessMen.Api.Controllers.ValuesController.Get (Gnb.BusinessMen.Api)" in 256.8021ms
+2019-03-07 21:56:40.373 -05:00 [Information] Executed endpoint '"Gnb.BusinessMen.Api.Controllers.ValuesController.Get (Gnb.BusinessMen.Api)"'
+2019-03-07 21:56:40.403 -05:00 [Information] Request finished in 542.1607ms 200 application/json; charset=utf-8
+2019-03-07 21:56:45.393 -05:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/rates  
+2019-03-07 21:56:45.400 -05:00 [Information] Executing endpoint '"Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)"'
+2019-03-07 21:56:45.413 -05:00 [Information] Route matched with "{action = \"Get\", controller = \"Rates\"}". Executing action "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)"
+2019-03-07 21:56:45.426 -05:00 [Information] Executing action method "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)" - Validation state: Valid
+2019-03-07 21:56:45.433 -05:00 [Information] Consultando todas las rates, Ejemplo Logging
+2019-03-07 21:56:45.469 -05:00 [Information] Executed action method "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 38.4518ms.
+2019-03-07 21:56:45.474 -05:00 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Gnb.BusinessMen.Model.Rates, Gnb.BusinessMen.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-03-07 21:56:45.485 -05:00 [Information] Executed action "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)" in 66.8669ms
+2019-03-07 21:56:45.490 -05:00 [Information] Executed endpoint '"Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)"'
+2019-03-07 21:56:45.504 -05:00 [Information] Request finished in 103.3479ms 200 application/json; charset=utf-8
+2019-03-07 21:57:14.414 -05:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/rates  
+2019-03-07 21:57:14.449 -05:00 [Information] Executing endpoint '"Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)"'
+2019-03-07 21:57:14.455 -05:00 [Information] Route matched with "{action = \"Get\", controller = \"Rates\"}". Executing action "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)"
+2019-03-07 21:57:14.468 -05:00 [Information] Executing action method "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)" - Validation state: Valid
+2019-03-07 21:57:14.473 -05:00 [Information] Consultando todas las rates, Ejemplo Logging
+2019-03-07 21:57:14.480 -05:00 [Information] Executed action method "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 5.3662ms.
+2019-03-07 21:57:14.485 -05:00 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Gnb.BusinessMen.Model.Rates, Gnb.BusinessMen.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-03-07 21:57:14.493 -05:00 [Information] Executed action "Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)" in 31.2888ms
+2019-03-07 21:57:14.503 -05:00 [Information] Executed endpoint '"Gnb.BusinessMen.Api.Controllers.RatesController.Get (Gnb.BusinessMen.Api)"'
+2019-03-07 21:57:14.520 -05:00 [Information] Request finished in 132.7332ms 200 application/json; charset=utf-8

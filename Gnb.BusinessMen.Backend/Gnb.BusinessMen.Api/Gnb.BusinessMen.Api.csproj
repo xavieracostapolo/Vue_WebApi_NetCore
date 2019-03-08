@@ -8,6 +8,25 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Gnb.BusinessMen.Data\Gnb.BusinessMen.Data.csproj" />
+    <ProjectReference Include="..\Gnb.BusinessMen.Model\Gnb.BusinessMen.Model.csproj" />
+    <ProjectReference Include="..\Gnb.BusinessMen.Service\Gnb.BusinessMen.Service.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="FileData\rates.json" />
+    <Content Remove="FileData\transactions.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FileData\rates.json" />
+    <None Include="FileData\transactions.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FileData\" />
+  </ItemGroup>
 </Project>
