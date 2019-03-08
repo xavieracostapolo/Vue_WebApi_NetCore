@@ -28,5 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FileData\" />
+    <Folder Include="LogEvent\" />
   </ItemGroup>
 </Project>
