@@ -45,6 +45,7 @@ export default new Vuex.Store({
         TransactionsRepository.get()
           .then(res => {
             if (res.status === 200) {
+              localStorage.setItem('transactions', JSON.stringify(res.data))
               context.commit(CARGAR_TRANSACTIONS, res.data)
               resolve(res)
             } else {
@@ -53,6 +54,9 @@ export default new Vuex.Store({
           })
           .catch(e => {
             console.log(e)
+            if (localStorage.getItem('transactions')) {
+              context.commit(CARGAR_TRANSACTIONS, JSON.parse(localStorage.getItem('transactions')))
+            }
             reject(e)
           })
       })
@@ -62,6 +66,7 @@ export default new Vuex.Store({
         RatesRepository.get()
           .then(res => {
             if (res.status === 200) {
+              localStorage.setItem('rates', JSON.stringify(res.data))
               context.commit(CARGAR_RATES, res.data)
               resolve(res)
             } else {
@@ -70,6 +75,9 @@ export default new Vuex.Store({
           })
           .catch(e => {
             console.log(e)
+            if (localStorage.getItem('rates')) {
+              context.commit(CARGAR_RATES, JSON.parse(localStorage.getItem('rates')))
+            }
             reject(e)
           })
       })
@@ -79,6 +87,7 @@ export default new Vuex.Store({
         TransactionsRepository.getBySku(sku)
           .then(res => {
             if (res.status === 200) {
+              localStorage.setItem('transactions', JSON.stringify(res.data))
               context.commit(CARGAR_TRANSACTIONS, res.data)
               resolve(res)
             } else {
@@ -87,6 +96,9 @@ export default new Vuex.Store({
           })
           .catch(e => {
             console.log(e)
+            if (localStorage.getItem('transactions')) {
+              context.commit(CARGAR_TRANSACTIONS, JSON.parse(localStorage.getItem('transactions')))
+            }
             reject(e)
           })
       })
@@ -96,6 +108,7 @@ export default new Vuex.Store({
         TransactionsRepository.getBySkuTotal(sku)
           .then(res => {
             if (res.status === 200) {
+              localStorage.setItem('total', JSON.stringify(res.data))
               context.commit(CARGAR_TOTAL, res.data)
               resolve(res)
             } else {
@@ -104,6 +117,9 @@ export default new Vuex.Store({
           })
           .catch(e => {
             console.log(e)
+            if (localStorage.getItem('total')) {
+              context.commit(CARGAR_TOTAL, JSON.parse(localStorage.getItem('total')))
+            }
             reject(e)
           })
       })
