@@ -109,7 +109,7 @@ namespace Gnb.BusinessMen.Service
 
                 if (amountEur > 0)
                 {
-                    item.Amount = item.Amount * amountEur;
+                    item.Amount = TruncateThenRound(item.Amount * amountEur, 2, MidpointRounding.ToEven);
                     item.Currency = "EUR";
                 }
             }
@@ -127,11 +127,25 @@ namespace Gnb.BusinessMen.Service
 
                 if (amountCad > 0 && amountCadEur > 0)
                 {
-                    item.Amount = item.Amount * amountCad;
-                    item.Amount = item.Amount * amountCadEur;
+                    item.Amount = TruncateThenRound(item.Amount * amountCad, 2, MidpointRounding.ToEven);
+                    item.Amount = TruncateThenRound(item.Amount * amountCadEur, 2, MidpointRounding.ToEven);
                     item.Currency = "EUR";
                 }
             }
+        }
+
+        /// <summary>
+        /// Truncates the then round.
+        /// </summary>
+        /// <returns>The then round.</returns>
+        /// <param name="value">Value.</param>
+        /// <param name="digits">Digits.</param>
+        /// <param name="mode">Mode.</param>
+        private decimal TruncateThenRound(decimal value, int digits, MidpointRounding mode)
+        {
+            decimal multiplier = (decimal)Math.Pow(10.0, digits + 1);
+            decimal truncated = Math.Truncate(value * multiplier) / multiplier;
+            return Math.Round(truncated, digits, mode);
         }
     }
 }
