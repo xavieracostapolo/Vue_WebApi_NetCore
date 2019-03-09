@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.0.0-rc.14",
     "vue": "^2.6.8",
     "vue-router": "^3.0.1",
+    "vue2-filters": "^0.5.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

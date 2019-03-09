@@ -11,9 +11,10 @@
               :current-page="currentPage"
               :per-page="perPage"
             >
-              <template slot="id" slot-scope="data">
+              <template slot="accion" slot-scope="data">
                 <!-- `data.value` is the value after formatted by the Formatter -->
-                <b-button variant="info" size="sm" :to="{ name: 'tiempos', params: { id: data.item.sku } }">Ver Resumen</b-button>
+                <b-button variant="info" size="sm" v-if="isResume" :to="{ name: 'resumen', params: { id: data.item.sku } }">Ver Resumen</b-button>
+                <b-button variant="info" size="sm" v-if="!isResume" :to="{ name: 'home' }">Volver</b-button>
               </template>
             </b-table>
           </div>
@@ -40,9 +41,14 @@ export default {
   name: 'ProductList',
   data: function () {
     return {
+      isResume: false,
       currentPage: 1,
       perPage: 5,
       fields: [
+        {
+          key: 'accion',
+          label: 'Accion'
+        },
         {
           key: 'sku',
           label: 'Codigo',
@@ -65,13 +71,19 @@ export default {
     }
   },
   created: function () {
-    this.$store.dispatch('cargarTransactions')
+    if (this.$route.params.id) {
+      this.isResume = false
+      this.$store.dispatch('cargarTransactionsBySku', this.$route.params.id)
+    } else {
+      this.isResume = true
+      this.$store.dispatch('cargarTransactions')
+    }
   },
   computed: {
     ...mapGetters(['transactionsList'])
   },
   methods: {
-    ...mapActions(['cargarTransactions'])
+    ...mapActions(['cargarTransactions', 'cargarTransactionsBySku'])
   }
 }
 </script>
