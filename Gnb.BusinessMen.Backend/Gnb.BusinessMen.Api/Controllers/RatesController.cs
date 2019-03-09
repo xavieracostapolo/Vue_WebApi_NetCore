@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Gnb.BusinessMen.Data;
@@ -38,8 +39,15 @@ namespace Gnb.BusinessMen.Api.Controllers
         [HttpGet]
         public IEnumerable<Rates> Get()
         {
-            _logger.LogError("Consultando todas las rates, Ejemplo Logging");
-            return serviceRates.GetAll();
+            try
+            {
+                return serviceRates.GetAll();
+            }
+            catch (ServiceException ex)
+            {
+                _logger.LogError(ex.StackTrace);
+                return new Collection<Rates>();
+            }
         }
 
         // GET api/values/5
