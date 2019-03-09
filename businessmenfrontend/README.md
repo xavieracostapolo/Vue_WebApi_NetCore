@@ -1,5 +1,7 @@
 # businessmenfrontend
 
+Este proyecto se realiza con Vue Js y el api con netcore 2.2
+
 ## Project setup
 ```
 npm install
