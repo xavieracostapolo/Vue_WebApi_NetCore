@@ -7,6 +7,9 @@ export default axios.create({
   baseURL,
   headers: {
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'crossDomain': 'true',
+    'crossorigin': 'true'
   }
 })

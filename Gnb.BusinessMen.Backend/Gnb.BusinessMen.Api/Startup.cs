@@ -37,6 +37,15 @@ namespace Gnb.BusinessMen.Api
             services.AddTransient<IServiceRates, ServiceRates>();
             services.AddTransient<IServiceTransactions, ServiceTransactions>();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", builder =>
+                    builder.AllowAnyHeader()
+                           .AllowAnyMethod()
+                           .AllowAnyOrigin()
+                );
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -56,6 +65,7 @@ namespace Gnb.BusinessMen.Api
             // logging
             loggerFactory.AddSerilog();
 
+            app.UseCors("AllowSpecificOrigin");
             app.UseHttpsRedirection();
             app.UseMvc();
         }
