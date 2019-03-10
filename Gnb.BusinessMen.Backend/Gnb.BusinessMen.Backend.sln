@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnb.BusinessMen.Data", "Gnb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnb.BusinessMen.Service", "Gnb.BusinessMen.Service\Gnb.BusinessMen.Service.csproj", "{1DB0D494-CA48-4A9E-88EE-94EE110D8011}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnb.BusinessMen.Test", "Gnb.BusinessMen.Test\Gnb.BusinessMen.Test.csproj", "{7023B631-10D3-4317-80CE-1BEA47D45E66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{1DB0D494-CA48-4A9E-88EE-94EE110D8011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DB0D494-CA48-4A9E-88EE-94EE110D8011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DB0D494-CA48-4A9E-88EE-94EE110D8011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7023B631-10D3-4317-80CE-1BEA47D45E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7023B631-10D3-4317-80CE-1BEA47D45E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7023B631-10D3-4317-80CE-1BEA47D45E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7023B631-10D3-4317-80CE-1BEA47D45E66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
