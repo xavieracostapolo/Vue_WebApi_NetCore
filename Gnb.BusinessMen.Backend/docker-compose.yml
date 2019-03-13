@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  gnb.businessmen.api:
+    image: ${DOCKER_REGISTRY-}gnbbusinessmen
+    build:
+      context: .
+      dockerfile: Gnb.BusinessMen.Api/Dockerfile
+    ports:
+    - target: 80
+      published: 8080
+      protocol: tcp
+      mode: host

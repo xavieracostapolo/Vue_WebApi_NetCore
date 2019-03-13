@@ -19,10 +19,6 @@
     <ProjectReference Include="..\Gnb.BusinessMen.Service\Gnb.BusinessMen.Service.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="FileData\rates.json" />
-    <Content Remove="FileData\transactions.json" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="FileData\rates.json" />
     <None Include="FileData\transactions.json" />
   </ItemGroup>
